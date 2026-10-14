@@ -1,0 +1,12 @@
+﻿models/
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.onnx
+__pycache__/
+*.pyc
+*.log
+*.xml
+.venv/
+venv/

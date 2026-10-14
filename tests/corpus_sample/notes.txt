@@ -1,0 +1,4 @@
+Operations runbook.
+The backup server hostname is bkup-07.internal.
+Nightly snapshots run at 02:00 local time.
+Contact the on-call engineer if a snapshot fails twice in a row.

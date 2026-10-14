@@ -1,0 +1,21 @@
+# Match 3 RAG container — pinned dependencies.
+# NOTE: torch is NOT listed here. The mandated ROCm base image
+# (rocm/pytorch:rocm10.0_ubuntu26.04_py3.14_pytorch_release_2.13.0)
+# already ships torch; pip will see it as satisfied.
+# For LOCAL CPU testing, install a CPU torch wheel first:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+numpy==2.2.6
+# faiss-cpu removed: no Python 3.14 wheels exist (base image is py3.14).
+# index_store.py now uses numpy brute-force inner product instead,
+# which is mathematically identical to faiss.IndexFlatIP.
+sentence-transformers==3.3.1
+rank-bm25==0.2.2
+pypdf==5.4.0
+python-docx==1.1.2
+openpyxl==3.1.5
+Pillow==11.3.0
+pytesseract==0.3.13
+# easyocr is OPTIONAL (heavy; pulls its own detection models).
+# Kept out of the default install: grading is offline and tesseract
+# covers the OCR fallback. Uncomment only if you pre-bake its models.
+# easyocr==1.7.2

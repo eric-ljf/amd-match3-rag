@@ -1,0 +1,8 @@
+tests/
+.git/
+__pycache__/
+*.pyc
+*.pyo
+README.md
+.venv/
+repro_10q.py
